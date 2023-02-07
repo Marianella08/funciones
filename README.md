@@ -14,3 +14,4 @@
 - git add .
 - git commit -m
 - git log
+- git push -u ---- master 

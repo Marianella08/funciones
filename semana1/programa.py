@@ -1,7 +1,7 @@
 from funcionesT import *
 import time
 
-def programa(personas):
+def programa(personas: dict):
     
     while True:
         print("-"*50)

@@ -28,3 +28,15 @@ visualizar(lista_u)
 agregar(lista_p)
 eliminar(lista_p)
 visualizar(lista_p)
+
+
+def agregar2(
+    lista: list,
+    lista2: list,
+    c = "hey"
+) -> list:
+    personas = lista +lista2
+    personas.append(c)
+    print(personas)
+    
+agregar(lista_u, lista_p)

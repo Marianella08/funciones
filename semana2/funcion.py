@@ -30,6 +30,7 @@ eliminar(lista_p)
 visualizar(lista_p)
 
 
+
 def agregar2(
     lista: list,
     lista2: list,

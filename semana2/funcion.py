@@ -4,7 +4,7 @@ lista_p= ["Felipe"]
 listasedades1 = [14, 18, 17, 13, 11, 14, 19]
 listasedades2 = [15, 12, 16, 9, 18, 20, 20]
 
-"""
+
 def agregar(
     lista: list
 ) -> list:
@@ -46,7 +46,6 @@ def agregar2(
     
 agregar(lista_u, lista_p)
 
-"""
 
 def algun_mayor(
     lista: list,

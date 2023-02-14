@@ -1,6 +1,10 @@
 lista_u = ["David", "Omar"]
 lista_p= ["Felipe"]
 
+listasedades1 = [14, 18, 17, 13, 11, 14, 19]
+listasedades2 = [15, 12, 16, 9, 18, 20, 20]
+
+"""
 def agregar(
     lista: list
 ) -> list:
@@ -41,3 +45,22 @@ def agregar2(
     print(personas)
     
 agregar(lista_u, lista_p)
+
+"""
+
+def algun_mayor(
+    lista: list,
+    lista2: list
+) -> list:
+    listas = lista +lista2
+    mayores = 0
+    total = 0
+    for i in listas:
+        total += 1
+        if i >= 18:
+         mayores += 1
+         
+    print(f"En total son {mayores} de edad, de {total} personas en total")
+
+algun_mayor (listasedades1, listasedades2)
+    

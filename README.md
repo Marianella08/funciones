@@ -8,6 +8,7 @@
 -  ```mkdir[CARPETA]```: crear carpetas
 - ```touch[ARCHIVO]```: crear un archivo
 - ```ls -all [CARPETA]```: muestra un listado de archivos presentes en una carpeta, incluzo los ocultos
+- ```x.split```
 
 ## Comandos de git
 - git init

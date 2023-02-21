@@ -18,6 +18,9 @@ def programa(personas):
         if seleccion == "1":
             agregar_persona(personas)
         
+        if seleccion == "2":
+            actualizar_persona(personas)
+        
         if seleccion =="3":
             eliminar_persona(personas)
             

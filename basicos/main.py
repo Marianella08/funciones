@@ -1,4 +1,4 @@
-from functions import arearectangulo
+from basicos.functions import arearectangulo
 
 altura = float(input(" ingresa la altura del rectangulo: "))
 base = float(input("ingresa la base del rectangulo: "))

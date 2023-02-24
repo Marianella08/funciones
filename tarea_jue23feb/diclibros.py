@@ -10,5 +10,8 @@ personas = {'Mary': [
 
 
 while True:
-    programa (personas)
-    
+   try:
+      programa (personas)
+   except:
+       print("ocurrio un error intenta de nuevo")
+       time.sleep(1.2)

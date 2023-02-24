@@ -1,4 +1,5 @@
 from funciones23 import *
+import time
 
 def programa(personas):
     while True:
@@ -26,6 +27,7 @@ def programa(personas):
             
         if seleccion == "4":
             print(personas)
+            time.sleep(1.2)
             
         if seleccion == "x":
             break

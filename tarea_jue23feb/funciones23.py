@@ -50,6 +50,15 @@ def eliminar_persona(
 def actualizar_persona(
     dicc:dict
     ) -> dict:
+    
+    """
+
+    Parametos:
+        diccionario (dict): el dicionario en el que se van a guardar los datos
+
+    Returns:
+        dict: te devuelve el mismo formato que entregaste en los parametros con la información actualizada
+    """
     nombre:str = str(input('\nIngresa el nombre del usuario que va a prestar el nuevo libro: '))
     libro:str = str(input(f'Ingresa el nuevo libro que presto el usuario {nombre}: '))
     date:str = str(input(f'Ingresa la fecha donde el usuario {nombre} presto el libro {libro}:  '))

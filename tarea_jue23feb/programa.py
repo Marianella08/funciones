@@ -8,7 +8,6 @@ def programa(personas):
             """
             Seleccione una acción.
             1. registrar usuario.
-            2. actualizar usuario.
             3. eliminar usuario.
             4. visualizar usuarios
             (x) salir
@@ -19,8 +18,8 @@ def programa(personas):
         if seleccion == "1":
             agregar_persona(personas)
         
-        if seleccion == "2":
-            actualizar_persona(personas)
+#        if seleccion == "2":
+#            actualizar_persona(personas)
         
         if seleccion =="3":
             eliminar_persona(personas)

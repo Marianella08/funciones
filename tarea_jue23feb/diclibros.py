@@ -9,5 +9,5 @@ personas = {'Mary': [
 
 
 while True:
-    agregar_persona(personas)
+    programa (personas)
     

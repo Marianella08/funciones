@@ -12,7 +12,7 @@ class alumno():
         else:
             print(f"{nota} no es una nota valida")
             
-juan = alumno("mary", 69)
+juan = alumno("mary")
 juan.aprobado(69)
 
         

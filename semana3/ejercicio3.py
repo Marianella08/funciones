@@ -1,8 +1,7 @@
 class alumno():
     
-    def __init__(self, nombre, nota):
+    def __init__(self, nombre):
         self.nombre = nombre
-        self.nota = nota
         
     
     def aprobado(self, nota):

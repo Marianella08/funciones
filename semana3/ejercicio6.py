@@ -1,5 +1,5 @@
 class SerVivo():
-    sentido_listas = ["olfato", "vista", "tacto", "gusto" "oido"]
+    sentido_listas = ["olfato", "vista", "tacto", "gusto", "oido"]
     
     def __init__ (self, nombre):
         self.nombre= nombre
@@ -10,7 +10,7 @@ class SerVivo():
     def movimiento(self):
         print(f"{self.nombre} se esta moviendo")
     
-    def sonido(self, X):
+    def sonido(self,):
         print(f"{self.nombre} esta haciendo sonido")
         
         
@@ -18,21 +18,21 @@ class Persona(SerVivo):
     def movimiento(self):
         print(f"{self.nombre} esta caminando")
         
-    def sonido(self, X):
+    def sonido(self):
         print(f"{self.nombre} esta hablando o, tal vez, gritando")
 
 class Gato(SerVivo):
     def movimiento(self):
         print(f"{self.nombre} se esta merodeando")
         
-    def sonido(self, X):
+    def sonido(self):
         print(f"{self.nombre} esta maullando")
 
 class Perro(SerVivo):
     def movimiento(self):
         print(f"{self.nombre} se esta trotando")
     
-    def sonido(self, X):
+    def sonido(self):
         print(f"{self.nombre} esta ladrando")
         
 P = Persona("Albino")

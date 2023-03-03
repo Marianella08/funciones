@@ -3,28 +3,28 @@ class Persona():
         self.nombre= nombre
         self.id= id
         self.info ={
-            "ID": self.id,
-            "Nombre": self.nombre,
-            "Libros": []
+            "id": self.id,
+            "nombre": self.nombre,
+            "libros": []
         }
         
     def __str__(self):
-        cantidad_libros =len(self.info["libros"])
+        cantidad_libros = len(self.info["libros"])
         return f"{self.id}:{self.nombre} = tiene {cantidad_libros} prestados"
     
     def agregar(self,libro, fecha):
         libro_prestados={
-            "Nombre": libro,
-            "Fecha": fecha,
+            "nombre": libro,
+            "fecha": fecha,
             "Estado": "prestado"
         }
-        self.info["Libros"].append(libro_prestados)
+        self.info["libros"].append(libro_prestados)
     
     
-    def Visualizar(self):
+    def visualizar(self):
         print(self.info["libros"])
-        
-    def Devolver(self, libro):
+    
+    def devolver(self, libro):
         for i in self.info["libros"]:
             if i["nombre"] == libro:
                 print("si está")
@@ -33,10 +33,10 @@ class Persona():
         
 p1 = Persona("1", "juancho")
 print(p1)
-p1.agregar_libro("1","1")
-p1.agregar_libro("2","2")
-p1.agregar_libro("3","3")
+p1.agregar("1","1")
+p1.agregar("2","2")
+p1.agregar("3","3")
 print(p1)
-p1.visualizar_libros()
-p1.devolver_libro("1")
-p1.visualizar_libros()
+p1.visualizar()
+p1.devolver("1")
+p1.visualizar()

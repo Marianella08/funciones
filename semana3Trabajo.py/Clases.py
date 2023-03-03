@@ -19,6 +19,14 @@ class Persona():
             "Estado": "prestado"
         }
         self.info["libros"].append(libro_prestados)
+        
+    def agregar(self,libro, fecha):
+        libro_prestados={
+            "nombre": libro,
+            "fecha": fecha,
+            "Estado": "prestado"
+        }
+        self.info["libros"].remove(libro_prestados)
     
     
     def visualizar(self):
@@ -29,6 +37,7 @@ class Persona():
             if i["nombre"] == libro:
                 print("si está")
                 i["estado"] = "devuelto"
+                
         
         
 p1 = Persona("1", "juancho")

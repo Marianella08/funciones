@@ -20,13 +20,8 @@ class Persona():
         }
         self.info["libros"].append(libro_prestados)
         
-    def agregar(self,libro, fecha):
-        libro_prestados={
-            "nombre": libro,
-            "fecha": fecha,
-            "Estado": "prestado"
-        }
-        self.info["libros"].remove(libro_prestados)
+    def eliminar(self):
+        del self
     
     
     def visualizar(self):
@@ -48,4 +43,6 @@ p1.agregar("3","3")
 print(p1)
 p1.visualizar()
 p1.devolver("1")
+p1.visualizar()
+p1.eliminar()
 p1.visualizar()

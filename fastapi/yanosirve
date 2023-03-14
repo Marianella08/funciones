@@ -1,0 +1,41 @@
+#@app. get ("/saludo/{nombre}")
+def hola(nombre:str,):
+    return f"hola {nombre}, como estas?"
+
+
+#@app. get ("/mayormenor/{nombre}/{edad}")
+def mayoria(nombre:str, edad:int):
+    if edad <= 18:
+        return f"hey {nombre}, eres menor de edad"
+    else:
+        return f"hey {nombre}, eres un adulto ya!"
+
+
+#@app. get ("/acuadrado/{ladocm}")
+def lado(ladocm:int):
+    Ac= ladocm*ladocm
+    return f"de un cuadrado con la longitud de {ladocm} en un lado, su area es: {Ac}"
+
+
+#@app. get ("/serio/{nombre}")
+def sero(nombre):
+    return f"serio? {nombre}"
+
+#@app. get ("/por/{nombre}")
+def que(nombre):
+    return f"porque? {nombre}"
+
+
+#@app. get ("/tell/{nombre}")
+def dime(nombre):
+    return f"dime que pasa, {nombre}"
+
+
+#@app. get ("/no/{nombre}")
+def nou(nombre):
+    return f"asi no era {nombre}!"
+
+
+#@app. get ("/adios/{nombre}")
+def adios(nombre):
+    return f"adios {nombre}, fuiste cruel"

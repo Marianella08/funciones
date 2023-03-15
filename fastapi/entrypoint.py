@@ -87,3 +87,12 @@ def personas_modify(request:personaModificar):
             i.edad = request.edad
             return 1
     return {"error": "Persona no encontrada"}
+
+
+@app.delete("/personas/{id}")
+def personas_delete(id:str):
+    for i in biblioteca:
+        if i.id == id:
+            print (i.id)
+            return i
+    return {"error": "persona no encontrada"}

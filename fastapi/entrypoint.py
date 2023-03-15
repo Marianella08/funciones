@@ -5,7 +5,13 @@ class personaBiblioteca(BaseModel):
     id:str
     nombre:str
     edad:int
-    libros: dict
+    
+
+class personaModificar(BaseModel):
+    id:str
+    nombre:str
+    edad:int
+    libros:dict
 
 app = FastAPI ()
 
@@ -60,11 +66,24 @@ def hello_world_check(nombre:str):
 def personas_all():
     return biblioteca
 
+
 @app.get("/personas/{id}")
 def personas_one(id:str):
     return biblioteca[id]
+
 
 @app.post("/personas")
 def personas_add(request:personaBiblioteca):
     biblioteca.append(request)
     return request
+
+
+@app.put("/personas")
+def personas_modify(request:personaModificar):
+    for i in biblioteca:
+        print(i)
+        if i.id == request.id:
+            i.nombre = request.nombre
+            i.edad = request.edad
+            return 1
+    return {"error": "Persona no encontrada"}

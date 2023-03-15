@@ -1,8 +1,15 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+
+class personaBiblioteca(BaseModel):
+    nombre:str
+    edad:str
+    libros: list
 
 app = FastAPI ()
 
-biblioteca = {
+biblioteca = [
+{
     "1":{
         "nombre":"Isa",
         "edad":"15",
@@ -36,11 +43,22 @@ biblioteca = {
         ]
     }
 }
-
+]
 
 # registramos una función en mi app en ruta (endpoint)
 # "/" ruta raiz
 # Solo podemos tener una función por verbo en una ruta
-@app.get("/{nombre}")
-def hola(nombre:str):
-    return biblioteca[nombre]
+@app.get("/")
+def hello_world_check(nombre:str):
+    return {
+        "titulo": "biblioteca Steam",
+        "version": "v0.0.1"
+    }
+    
+@app.get("/personas")
+def personas_all():
+    return biblioteca
+
+@app.get("/personas/{id}")
+def personas_one(id:str):
+    return biblioteca[id]

@@ -2,9 +2,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 class personaBiblioteca(BaseModel):
+    id:str
     nombre:str
-    edad:str
-    libros: list
+    edad:int
+    libros: dict
 
 app = FastAPI ()
 
@@ -62,3 +63,8 @@ def personas_all():
 @app.get("/personas/{id}")
 def personas_one(id:str):
     return biblioteca[id]
+
+@app.post("/personas")
+def personas_add(request:personaBiblioteca):
+    biblioteca.append(request)
+    return request

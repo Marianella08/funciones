@@ -7,3 +7,12 @@
 
 ## Instalar FastAPI
 1. instalación de FastAPI ```` pip install fastapi uvicorn````
+
+## Creación de shemas
+```python
+from pydantic import BaseModel
+
+class PersonaCreate(BaseModel):
+    nombre :str
+    edad: str
+    ocupacion:str

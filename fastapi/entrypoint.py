@@ -1,4 +1,4 @@
-#Toco exponer la biblioteca ayudad ;)
+#solo vamos a trabajar y detallar la biblioteca :D
 
 from fastapi import FastAPI
 from pydantic import BaseModel

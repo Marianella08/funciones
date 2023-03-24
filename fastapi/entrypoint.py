@@ -1,7 +1,14 @@
 #solo vamos a trabajar y detallar la biblioteca :D
 
 from fastapi import FastAPI
+from dotcenv import load_dotenv #verifica esto antes de continuar
 from pydantic import BaseModel
+
+
+load_dotenv()
+NAME= os.getenv
+VERSION= os.getenv
+
 
 class personaBiblioteca(BaseModel):
     id:str
@@ -60,8 +67,8 @@ biblioteca = [
 #@app.get("/")
 def hello_world_check(nombre:str):
     return {
-        "titulo": "biblioteca Steam",
-        "version": "v0.0.1"
+        "titulo": NAME,
+        "version": VERSION
     }
     
 #@app.get("/personas")

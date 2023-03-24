@@ -1,13 +1,13 @@
-#solo vamos a trabajar y detallar la biblioteca :D
 
 from fastapi import FastAPI
-from dotcenv import load_dotenv #verifica esto antes de continuar
+from dotenv import load_dotenv 
 from pydantic import BaseModel
+import os
 
 
 load_dotenv()
-NAME= os.getenv
-VERSION= os.getenv
+NAME= os.getenv("NAME")
+VERSION= os.getenv("VERSION")
 
 
 class personaBiblioteca(BaseModel):
@@ -64,30 +64,30 @@ biblioteca = [
 # registramos una función en mi app en ruta (endpoint)
 # "/" ruta raiz
 # Solo podemos tener una función por verbo en una ruta
-#@app.get("/")
+@app.get("/")
 def hello_world_check(nombre:str):
     return {
-        "titulo": NAME,
-        "version": VERSION
+       "titulo": NAME,
+       "version": VERSION
     }
     
-#@app.get("/personas")
+@app.get("/personas")
 def personas_all():
     return biblioteca
 
 
-#@app.get("/personas/{id}")
+@app.get("/personas/{id}")
 def personas_one(id:str):
     return biblioteca[id]
 
 
-#@app.post("/personas")
+@app.post("/personas")
 def personas_add(request:personaBiblioteca):
     biblioteca.append(request)
     return request
 
 
-#@app.put("/personas")
+@app.put("/personas")
 def personas_modify(request:personaModificar):
     for i in biblioteca:
         print(i)
@@ -98,7 +98,7 @@ def personas_modify(request:personaModificar):
     return {"error": "Persona no encontrada"}
 
 
-#@app.delete("/personas/{id}")
+@app.delete("/personas/{id}")
 def personas_delete(id:str):
     for i in biblioteca:
         if i.id == id:
